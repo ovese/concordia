@@ -9,6 +9,7 @@
 #include <stdexcept>
 #include <cctype>
 #include <vector>
+#include <iomanip> // used to set the precision
 using namespace std;
 
 
@@ -22,6 +23,7 @@ public:
     double problemTwoo(double&, double&);
     vector<double> problemTwovec(vector<double>, vector<double>);
     vector<double> problemTwoovec(vector<double>&, vector<double>&);
+    double problemThree(double);
     
     
     string hello;

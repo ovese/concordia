@@ -135,3 +135,12 @@ vector<double> Catcher::problemTwoovec(vector<double> &vc1, vector<double> &vc2)
     
     return vsum;
 }
+
+double Catcher::problemThree(double meter_var)
+{
+    cout<<" Unit conversion: meter to feet"<<endl;
+    // 1 meter = 3.28084
+    double feet_var=meter_var*3.28084;
+    
+    return feet_var;
+}
