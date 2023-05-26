@@ -38,8 +38,12 @@ int main(int argc, char **argv)
         cout<<"res["<<ii<<"]="<<res[ii]<<endl;
     }
     
-    double conv2feet=ct.problemThree(3);
+    double meter_val=5.6;
+    double conv2feet=ct.problemThree(meter_val);
     cout<<"converting from meter to feet: "<<conv2feet<<endl;
+    
+    double conv2=ct.problemThreeUnits(meter_val,"yard");
+    cout<<" "<<meter_val<<" = "<<conv2<<endl;
     
 	return 0;
 }

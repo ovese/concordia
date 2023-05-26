@@ -24,6 +24,7 @@ public:
     vector<double> problemTwovec(vector<double>, vector<double>);
     vector<double> problemTwoovec(vector<double>&, vector<double>&);
     double problemThree(double);
+    double problemThreeUnits(double,string);
     
     
     string hello;

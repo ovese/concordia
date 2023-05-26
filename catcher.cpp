@@ -144,3 +144,29 @@ double Catcher::problemThree(double meter_var)
     
     return feet_var;
 }
+
+double Catcher::problemThreeUnits(double val, string unit)
+{
+    double conv_res=0.0;
+    if(unit=="ft")
+    {
+        conv_res=val*3.28084;
+        cout<<"Conversion to: "<<unit;
+    }
+    else if(unit=="cm")
+    {
+        conv_res=val*100;
+        cout<<"Conversion to: "<<unit;
+    }
+    else if(unit=="yard")
+    {
+        conv_res=val/0.914;
+        cout<<"Conversion to: "<<unit;
+    }
+    else
+    {
+        cout<<unit<<" is not a known length measurement unit"<<endl;
+    }
+    
+    return conv_res;
+}
