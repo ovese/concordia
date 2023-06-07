@@ -44,6 +44,21 @@ int main(int argc, char **argv)
     
     double conv2=ct.problemThreeUnits(meter_val,"yard");
     cout<<" "<<meter_val<<" = "<<conv2<<endl;
+    cout<<"Setting precision on the result to 3dp"<<endl;
+    cout<<" "<<meter_val<<" = "<<fixed<<setprecision(3)<<conv2<<endl;
+	
+	// starting execution of question four
+	ct.problemFour(33.3);
+	
+	// testing the extended temperature function
+	ct.val_temp=ct.problemFourEx(313.4, "degC");
+	cout<<"The temperature converter results in: "<<ct.val_temp<<endl;
+	
+	ct.val_temp=ct.problemFourEx(27.5, "degF");
+	cout<<"The temperature converter results in: "<<ct.val_temp<<endl;
+	
+	// testing floating point multiplication
+	ct.problemFive();
     
 	return 0;
 }

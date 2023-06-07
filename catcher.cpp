@@ -170,3 +170,73 @@ double Catcher::problemThreeUnits(double val, string unit)
     
     return conv_res;
 }
+
+void Catcher::problemFour(double val)
+{
+	cout<<"The value to be converted is: "<<val<<endl;
+	// check to see the magnitude of the value argument in the passed to the function
+		cout<<"Convert to fahrenheit"<<endl;
+		double val_fah = (val * 9/5) + 32.0 ;
+		cout<<"Convert to centigrade"<<endl;
+		double val_cent = (val-32.0)*(5/9);
+		cout<<"Convert to Kelvin"<<endl;
+		double val_kelv = val_cent + 273.15;
+		cout<<"Convert to Rankine"<<endl;
+		double val_rank = val_cent * (9/5) + 491.67;
+		cout<<"The temperature converter results in: "<<val_fah<<" Fahrenheit"<<endl;
+		cout<<"The temperature converter results in: "<<val_cent<<" Centigrade"<<endl;
+		cout<<"The temperature converter results in: "<<val_kelv<<" Kelvin"<<endl;
+		cout<<"The temperature converter results in: "<<val_rank<<" Rankine"<<endl;		
+}
+
+double Catcher::problemFourEx(double val, string unit)
+{
+	cout<<"The needed temperature is in: "<<unit<<endl;
+	if(unit=="degF")
+	{
+		cout<<"Convert to fahrenheit"<<endl;
+		double val_fah = (val * 9.0/5.0) + 32.0 ;
+		val_temp=val_fah;		
+	}
+	else if(unit=="degC")
+	{
+		cout<<"Convert to centigrade"<<endl;
+		double val_cent = (val-32.0)*(5.0/9.0);
+		val_temp=val_cent;
+	}
+	
+	return val_temp;
+}
+
+void Catcher::problemFive()
+{
+	// char regex_filename[] = “[a-zA-Z_] [a-zA-Z_0-9]*\\.[a-zA-Z0-9]+”;
+	// Match a letter (lowercase and then uppercase) or an underscore. 
+	// Then match zero or more characters, in which each may be a letter, 
+	// or an underscore or a digit. Then match a literal dot (.). After the dot, 
+	// match one or more characters, in which each may be a letter or digit indicating file extension
+	
+	std::regex regex_fval("[0-9]*\\.[0-9]*");
+	// multiplication of two floating point numbers
+	float f1,f2;
+	
+	cout<<"enter two floating point numbers to multiply: "<<endl;
+	cin>>f1>>f2;
+	cout<<"testing type of regex expression: "<<regex_match(to_string(f1),regex_fval)<<endl;
+	try
+	{
+		if( regex_match(to_string(f1),regex_fval) && regex_match(to_string(f2),regex_fval) )
+		{
+			throw("Non floating point entry detected");
+		}
+		else
+		{
+			double flores=f1*f2;
+			cout<<"The floating point product of "<<f1<<"*"<<f2<<"="<<flores<<endl;
+		}
+	}
+    catch(const char* msg)
+    {
+        cerr<<"Thrown exception for incorrect input type: "<<msg<<endl;
+    }
+}
