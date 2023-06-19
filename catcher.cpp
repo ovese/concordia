@@ -240,3 +240,14 @@ void Catcher::problemFive()
         cerr<<"Thrown exception for incorrect input type: "<<msg<<endl;
     }
 }
+
+void Catcher::problemPtr()
+{
+	// testing various ppinter ideas
+	char grade='8';
+	char *ptr_grade=&grade;
+	cout<<"The grade is : "<<grade<<endl;
+	cout<<"The address of variable grade is: "<<&grade<<endl;
+	cout<<"Thew poiinter to grade contains: "<<ptr_grade<<endl;
+	cout<<"Thew poiinter to grade contains: "<<*ptr_grade<<endl;
+}

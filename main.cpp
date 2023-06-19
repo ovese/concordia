@@ -4,8 +4,8 @@ int main(int argc, char **argv)
 {
 	printf("Cpp tests\n");
     Catcher ct;
-    ct.hello=ct.problemOne();
-    cout<<"The first greeting printed as default is: "<<ct.hello<<endl;
+    //ct.hello=ct.problemOne();
+    //cout<<"The first greeting printed as default is: "<<ct.hello<<endl;
     
     ct.sum=ct.problemTwo(19,19);
     cout<<"Calling the first sum by value: "<<ct.sum<<endl;
@@ -59,6 +59,40 @@ int main(int argc, char **argv)
 	
 	// testing floating point multiplication
 	ct.problemFive();
+	
+	//testing out the pointer usage
+	ct.problemPtr();
+	
+	//testing the operator overload
+	//Complex cplx; // this is kind of useless, not doing anything
+	Complex a(3.5,2.7);
+	a.displayData();
+	Complex b(4.6,1.9);
+	b.displayData();
+	Complex c=a+b;	
+	c.displayData();
+	
+	// testing polymorphism
+	Car mycar;
+	mycar.brand();
+	mycar.getColor();
+	
+	BMW bw;
+	bw.brand();
+	bw.getColor("Blue");
+	
+	Car *car2=new BMW();
+	car2->accelerate();
+	
+	// testing friend class usage 
+    GFG g;
+    F fri;
+    fri.display(g);
+	
+	// testing friend goabl function usAGE
+	base bobj;
+	//friendFunction(bobj);
+	
     
 	return 0;
 }
